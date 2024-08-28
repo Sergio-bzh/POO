@@ -2,7 +2,7 @@
 /**
  * Objet compte bancaire 
  */
-class Compte
+abstract class Compte
 {
     /**
      * Titulaire du compte
@@ -16,10 +16,7 @@ class Compte
      *
      * @var float
      */
-    private $solde;
-
-    // CONSTANTES
-    const TAUX_INTERETS = 5;
+    protected $solde;
 
     /**
      * Constructeur du compte bancaire 
@@ -32,7 +29,7 @@ class Compte
         // J'attribue le nom à la propriété titulaire
         $this->titulaire = $nom;
         // J'attribue le montant à la propriaté solde
-        $this->solde = $montant + ($montant * self::TAUX_INTERETS / 100);
+        $this->solde = $montant;
     }
 
     /**
@@ -122,18 +119,13 @@ class Compte
         } else {
             echo ('Montant invalide ou solde insuffisant.');
         }
-        echo $this->decouvert();
     }
 
-    private function decouvert()
-    {
-        if($this->solde < 0){
-            return 'Vous êtes à découvert';
-        }else{
-            return "Vous n'êtes pas à découver";
-        }
-    }
-
+    /**
+     * Convertit l'objet en string et retourne une chaine de caratères avec des valeurs de l'objet
+     *
+     * @return string
+     */
     public function __toString()
     {
         return "Vous visualisez le compte de {$this->titulaire} qui a un solde de {$this->solde}";
