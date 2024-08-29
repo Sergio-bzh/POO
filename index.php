@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . ('/classes/Compte.php');
-require_once __DIR__ . ('/classes/CompteCourant.php');
-require_once __DIR__ . ('/classes/CompteEpargne.php');
+require_once __DIR__ . ('/classes/Banque/Compte.php');
+require_once __DIR__ . ('/classes/Banque/CompteCourant.php');
+require_once __DIR__ . ('/classes/Banque/CompteEpargne.php');
 require_once __DIR__ . ('/classes/Client/Compte.php');
 
 // J'instancie le compte
