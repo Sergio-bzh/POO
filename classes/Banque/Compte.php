@@ -1,4 +1,5 @@
 <?php
+namespace App\Banque;
 /**
  * Objet compte bancaire 
  */
