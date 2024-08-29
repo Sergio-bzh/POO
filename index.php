@@ -1,4 +1,7 @@
 <?php
+use App\Banque\CompteCourant;
+use App\Banque\CompteEpargne;
+
 require_once __DIR__ . ('/classes/Banque/Compte.php');
 require_once __DIR__ . ('/classes/Banque/CompteCourant.php');
 require_once __DIR__ . ('/classes/Banque/CompteEpargne.php');
