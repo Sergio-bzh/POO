@@ -1,37 +1,20 @@
 <?php
 require_once __DIR__ . ('/classes/Compte.php');
+require_once __DIR__ . ('/classes/CompteCourant.php');
+require_once __DIR__ . ('/classes/CompteEpargne.php');
 
 // J'instancie le compte
-$compte1 = new Compte('Benoit');
+$compteCourant1 = new CompteCourant('Benoit', 500, 200);
+$compteEpargne1 = new CompteEpargne('Rober', 300, 10);
 
 // J'écris dans la propriété titulaire du compte1
-// $compte1->titulaire = 'Toto';
 
 // On dépose 500
-$compte1->deposer(500);
+$compteCourant1->deposer(500);
 
 echo('<pre>');
-var_dump($compte1);
-// $compte2 = new Compte('Rober');
+    var_dump($compteCourant1);
 
-// var_dump($compte2);
+    var_dump($compteEpargne1);
+
 echo('</pre>');
-?>
-
-<p><?=$compte1->voirSolde();?></p>
-
-<?php
-$compte1->retirer(900);
-echo '<br>';
-echo ('<br>Le titulaire du compte est '.$compte1->getTitulaire());
-echo '<br>';
-$compte1->getSolde();
-echo '<br>';
-var_dump($compte1->getSolde());
-echo '<br>';
-echo $compte1;
-echo '<br>';
-
-$compte3 = new Compte('Sergio');
-// var_dump($compte3);
-echo "$compte3";
