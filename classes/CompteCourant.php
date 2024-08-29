@@ -40,7 +40,7 @@ class CompteCourant extends Compte
      */
     public function retirer(float $montant): void
     {
-        if($montant > 0 && $this->solde - $montant >= $this->decouvert){
+        if($montant > 0 && $this->solde - $montant >= -$this->decouvert){
             $this->solde -= $montant;
         }else{
             echo 'Solde insuffiiant';
